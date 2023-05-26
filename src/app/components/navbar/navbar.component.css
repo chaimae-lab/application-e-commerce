@@ -1,0 +1,36 @@
+body{
+	font-family: 'Fredoka One', cursive;
+}
+
+.navbar-light{
+    background-color:#54d3c2 ;
+    border-color: transparent;
+    padding:1%;
+    /* margin:1px;  */
+    }
+    
+    .navbar-light .navbar-brand{
+        /* color: #262626; */
+        font-size:20px;
+       padding: 10px 10px;
+       font-weight: 900;
+    }
+    
+    .nav.navbar-nav.navbar-right{
+        margin: 15px 0;
+    }
+    
+    
+    .navbar-light .navbar-nav > li > a{
+        color: #262626;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .navbar-toggler{
+        outline: none;
+    }
+
+
+  

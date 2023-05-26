@@ -1,0 +1,44 @@
+<button class="btn btn-primary" routerLink="/costomer">  New Product</button>
+<!-- 
+
+<form class="form-inline">
+    <input class="form-control" name="searchInput"  placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width:80%">
+<button class="btn btn-outline-primary" (click)="searchText=''">X</button>
+</form> -->
+<div class="row mt-4">
+        <div class="col-md-6 mx-auto">
+<div class="card">
+<div class="card-body">
+    <h4 class="card-title">List Product</h4>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Edit</th>
+</tr>
+
+</thead>
+<tbody>
+
+    <tr  *ngFor="let customer of productArray">
+    <td> {{customer.Name}} </td>
+    <td> {{customer.price}} </td>
+    <td> 
+    <button class="btn btn-info" routerLink="/costomer" (click)="costomerService.populateForm(customer)">  Edit</button>    
+    <button class="btn btn-danger" (click)="onDelete(customer.$key)">Delete</button>    
+  
+</td>
+    </tr>
+</tbody>
+</table>
+
+<div class="alert alert-danger" *ngIf="showSuccessMessage">
+        Deleted successfully.
+
+    </div>
+</div>
+</div>
+</div>
+</div>

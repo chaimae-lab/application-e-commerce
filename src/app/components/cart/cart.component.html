@@ -1,0 +1,23 @@
+<div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+<ul  class="list-group">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    <!-- <app-cart-item [cartItem]="item"></app-cart-item> -->
+
+
+    <div class="cart-item">
+      <!-- <img [src]="item.image" alt=""> -->
+        <span>{{item.productName}} </span> x
+        <span>{{item.qty}} </span>:
+        <strong>{{ (item.qty * item.price) | currency:'$' }}</strong>
+        
+      </div>
+      
+      
+  </li>
+
+  <li class="list-group-item active">
+    <strong>Total</strong> {{  cartTotal | currency:'$' }}
+  </li>
+</ul>
+

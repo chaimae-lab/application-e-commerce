@@ -1,0 +1,155 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-black">
+    
+    <a class="navbar-brand" href="#">Glasses</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink="/products" routerLinkActive="active" ><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" *ngIf="isLoggedIn">
+         
+            <a      class="nav-link" href="#" routerLink="/costomerlist" routerLinkActive="active" >Manger Product<span class="sr-only">(current)</span></a>
+            
+          </li>
+
+          <li class="nav-item active"  *ngIf="!isLoggedIn">
+            <a  class="nav-link" href="#" routerLink="/register"  >register<span class="sr-only">(current)</span></a>
+          </li>
+          
+
+          <li class="nav-item active"  *ngIf="!isLoggedIn">
+         
+            <a      class="nav-link" href="#" routerLink="/login" routerLinkActive="active" >Login<span class="sr-only">(current)</span></a>
+            
+          </li>
+
+    
+
+
+
+          <li class="nav-item active"  *ngIf="isLoggedIn">
+         
+              <a      class="nav-link"  routerLink="/login" routerLinkActive="active" > {{ userLoggedIn }} <span class="sr-only">(current)</span></a>
+              
+            </li>
+
+
+         
+            <li class="nav-item active"  *ngIf="isLoggedIn">
+         
+                <a      class="nav-link" href="#" (click)="logout()" routerLink="/login" routerLinkActive="active" > Log Out <span class="sr-only">(current)</span></a>
+                
+              </li>
+  
+              <li class="nav-item active"  *ngIf="isLoggedIn">
+         
+                <a      class="nav-link" href="#" routerLink="/cart" routerLinkActive="active" >cart <span class="sr-only">(current)</span></a>
+                
+              </li>
+  
+  
+  
+
+
+
+
+          
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#" routerLink="/products" routerLinkActive="active" >Home<span class="sr-only">(current)</span></a>
+            </li>
+        <!-- <li class="nav-item active"  *ngIf="!isLoggedIn">
+          <a class="nav-link" href="#" routerLink="/cart" routerLinkActive="active">
+          <i class="fas fa-shopping-cart fa-2x"></i>
+          
+          </a>
+        </li> -->
+
+
+        <li class="nav-item active"  *ngIf="isLoggedIn">
+         
+            <a      class="nav-link"  routerLink="/contact" routerLinkActive="active" > Contact<span class="sr-only">(current)</span></a>
+            
+          </li>
+        <!-- <ng-template  #anomymouseUser>
+          <div>
+              <a class="nav-link" href="#" routerLink="/login">login</a>
+
+          </div>
+        </ng-template> -->
+        <!-- <li   *ngIf="s.user$ | async as user else anomymouseUser" class="nav-item dropdown">
+      <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" >
+             {{ user.displayName }} 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"  routerLink="/costomerlist">Manage product</a>
+              <a class="dropdown-item"  routerLink="/costomer">New product</a>
+              <button class="dropdown-item" href="#"  (click)="logout()">   Log Out</button>
+            </div>
+          </li> -->
+          
+             
+      </ul>
+    </div>
+
+
+  </nav>
+
+
+
+
+
+
+
+
+<!-- 
+ <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Shopping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#" routerLink="/products" routerLinkActive="active" >HOME<span class="sr-only">(current)</span></a>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" routerLink="/admin" routerLinkActive="active">Dashboard</a>
+                    </li>
+
+
+                    <ng-template  #anomymouseUser>
+                      <div>
+                          <a class="nav-link" href="#" routerLink="/login">login</a>
+
+                      </div>
+                    </ng-template>
+                    <li   *ngIf="s.user$ | async as user else anomymouseUser" class="nav-item dropdown">
+                  <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" >
+                         {{ user.displayName }} 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#"  routerLink="/costomerlist">Manage product</a>
+                          <a class="dropdown-item"  routerLink="/costomer">New product</a>
+                          <button class="dropdown-item" href="#"  (click)="logout()">   Log Out</button>
+                        </div>
+                      </li>
+                         
+                  </ul>
+                </div>
+
+
+              </nav>
+ </div> -->
+</header>
+
+
+
+

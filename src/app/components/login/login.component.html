@@ -1,0 +1,126 @@
+<!-- <button class="btn btn-primary" (click)="login()">Login</button> -->
+
+<!-- 
+ <div class="row mt-4">
+  <div class="col-md-6 mx-auto">
+      <div class="card">
+          <div class="card-body">
+<h1 class="text-center">
+    <span class="text-primary">
+        <i class="fa fa-lock" aria-hidden="true"></i>Login
+    </span>
+
+</h1>
+
+
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+      <div class="row" *ngIf="authError">
+        <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <label for="email">Email</label>
+          <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <label for="password">Password</label>
+          <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-12">
+          <a href="/register">Click here to register</a>
+        </div>
+
+      
+
+              <input type="submit" value="Login" class="btn btn-primary btn-block" >
+
+              <button type="button" class="btn btn-danger btn-block"   (click)="loginGoogle()">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>  
+                
+                Login With Google</button>
+
+      </div>
+      
+
+    </form>
+  </div>
+</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+<div class="container">
+		<div class="img">
+			<img src="assets/img/colorg.svg">
+		</div>
+		<div class="login-content">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <!-- <div class="row" *ngIf="authError">
+                <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+              </div> -->
+            <img src="assets/img/femaleg.svg">
+				<h2 class="title">Login</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Email</h5>
+                      <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+                    </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+                     <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+                    </div>
+            	</div>
+              <a href="/register">Click here to register</a>
+              <input type="submit" class="btn" value="Login">
+              <button type="button" class="btn btn-danger btn-block"   (click)="loginGoogle()">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>  
+                  
+                  Login With Google</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    const inputs = document.querySelectorAll(".input");
+
+
+        function addcl(){
+          let parent = this.parentNode.parentNode;
+          parent.classList.add("focus");
+        }
+        
+        function remcl(){
+          let parent = this.parentNode.parentNode;
+          if(this.value == ""){
+            parent.classList.remove("focus");
+          }
+        }
+        
+        
+        inputs.forEach(input => {
+          input.addEventListener("focus", addcl);
+          input.addEventListener("blur", remcl);
+        });
+        </script>
+
+        <p>icon</p><span class="glyphicon glyphicon-star"></span>
